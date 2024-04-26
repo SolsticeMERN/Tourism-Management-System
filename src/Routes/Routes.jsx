@@ -7,7 +7,6 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Home from "../Pages/Home";
 import ViewDetails from "../Pages/ViewDetails";
-import TouristSpot from "../Pages/TouristSpot";
 
 
 const router = createBrowserRouter([
@@ -18,10 +17,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        loader: () => fetch("http://localhost:3000/tourismSpots")
       },
       {
         path: "/allTouristSpot",
         element: <AllTouristsSpot></AllTouristsSpot>,
+        loader: () => fetch("http://localhost:3000/tourismSpots")
       },
       {
         path: "/addTouristSpot",
@@ -38,10 +39,6 @@ const router = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
-      },
-      {
-        path: "/touristSpot",
-        element: <TouristSpot></TouristSpot>,
       },
       {
         path: "/viewDetails",
