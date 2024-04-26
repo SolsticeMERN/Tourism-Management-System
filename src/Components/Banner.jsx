@@ -62,15 +62,15 @@ const Banner = () => {
                             data-twe-carousel-item
                         >
                             <img
-                                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-                                className="block w-full"
+                                src="https://i.ibb.co/bXnyySQ/photo-1541417904950-b855846fe074-q-80-w-1741-auto-format-fit-crop-ixlib-rb-4-0.jpg"
+                                className="block w-full object-fill bg-cover h-[300px] md:h-[675px]"
                                 alt="..."
                             />
-                            <div className="absolute inset-x-[15%] top-64 hidden py-5 text-center text-white md:block">
-                                <h5 className="text-xl">First slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the first slide.
-                                </p>
+                            <div className="absolute inset-x-[15%] top-1/2 hidden py-5 text-center text-white md:block">
+                                <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
+                               <div className="uppercase text-4xl">
+                               <span>Discover</span> the world with our guide
+                               </div>
                             </div>
                         </div>
                         {/* <!--Second item--> */}
@@ -80,14 +80,14 @@ const Banner = () => {
                             data-twe-carousel-item
                         >
                             <img
-                                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
-                                className="block w-full"
+                                src="https://i.ibb.co/NSpmr3F/premium-photo-1661963952208-2db3512ef3de-q-80-w-1844-auto-format-fit-crop-ixlib-rb-4-0.jpg"
+                                className="block w-full object-fill bg-cover h-[300px] md:h-[675px]"
                                 alt="..."
                             />
-                            <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                                <h5 className="text-xl">Second slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the second slide.
+                            <div className="absolute inset-x-[15%] top-1/2 hidden py-5 text-center text-white md:block">
+                            <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
+                                <p className="uppercase text-4xl">
+                                Explore Rome With  <span>TTravol</span>
                                 </p>
                             </div>
                         </div>
@@ -98,14 +98,14 @@ const Banner = () => {
                             data-twe-carousel-item
                         >
                             <img
-                                src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
-                                className="block w-full"
+                                src="https://i.ibb.co/CQf2Vdw/dl-beatsnoop-com-ultra-Mv-Q6-DOEBAm.jpg"
+                                className="block w-full object-fill bg-cover h-[300px] md:h-[675px]"
                                 alt="..."
                             />
-                            <div className="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
-                                <h5 className="text-xl">Third slide label</h5>
-                                <p>
-                                    Some representative placeholder content for the third slide.
+                            <div className="absolute inset-x-[15%] top-1/2 hidden py-5 text-center text-white md:block">
+                            <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
+                                <p className="uppercase text-4xl">
+                                Explore The World With <span>TTravol</span>
                                 </p>
                             </div>
                         </div>
