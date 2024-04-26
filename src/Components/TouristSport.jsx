@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const TouristSport = ({touristic}) => {
 
-    const {image, tourists_spot_name, location, shortdescription,} = touristic
+    const {image, tourists_spot_name, location, average_cost, shortdescription,} = touristic
 
     // const {image, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time, totalVisitorsPerYear} = touristic
 
@@ -29,6 +29,9 @@ const TouristSport = ({touristic}) => {
           <small>{location}</small>
           <p className="mb-4 text-base">
             {shortdescription}
+          </p>
+          <p className="mb-4 text-base">
+            {average_cost}
           </p>
           <Link to='/viewDetails'>
           <button
