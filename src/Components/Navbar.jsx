@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { useContext } from "react";
+import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../Providers/AuthProvider";
 
 const Navbar = () => {
   const navLinks = (
@@ -17,6 +19,21 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  const { user, SignOutUser } = useContext(AuthContext);
+  const navigate = useNavigate();
+
+  const handleLogOut = () => {
+    SignOutUser()
+      .then(() => {
+        console.log("Sign-out successful");
+        navigate("/login");
+      })
+      .catch((error) => {
+        console.log(error.message);
+      });
+  };
+  
   return (
     <div>
       <div className="navbar bg-base-100">
@@ -91,7 +108,47 @@ const Navbar = () => {
               </svg>
             </label>
           </div>
-          <a className="btn">Button</a>
+          {user ? (
+          <div className="dropdown dropdown-end">
+            <div
+              tabIndex={0}
+              role="button"
+              className="btn btn-ghost btn-circle avatar"
+              title={user.displayName}
+            >
+              <div className="w-10 rounded-full">
+                {user.photoURL ? (
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src={user.photoURL}
+                  />
+                ) : (
+                  <img
+                    alt="Tailwind CSS Navbar component"
+                    src="https://daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  />
+                )}
+              </div>
+            </div>
+            <ul
+              tabIndex={0}
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+            >
+              <li>
+                <h2>{user.displayName}</h2>
+              </li>
+              <li>
+                <a className="bg-red-600 text-white" onClick={handleLogOut}>
+                  Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        ) : (
+          <Link to="/login" className="btn bg-[#0dcdbd] text-white">
+            Login
+          </Link>
+        )}
         </div>
       </div>
     </div>
