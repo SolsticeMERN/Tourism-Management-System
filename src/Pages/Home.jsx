@@ -10,7 +10,6 @@ AOS.init();
 
 const Home = () => {
   const touristSpots = useLoaderData();
-  console.log(touristSpots);
   const featuredTouristSpots = touristSpots.slice(0, 6);
 
   const [countries, setCountries] = useState([])
@@ -20,6 +19,7 @@ const Home = () => {
    .then(res => res.json())
    .then(data => setCountries(data))
   }, [])
+
 
   return (
     <>
@@ -101,10 +101,11 @@ const Home = () => {
       <div className="m-5 md:m-10 text-5xl text-center font-bold">
             <h2>Countries</h2>
           </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 lg:p-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 lg:p-10">
       {
         countries.map((country) => (
           <div key={country._id}>
+            <Link to={`/countries/${country.country_Name}`}>
             <div data-aos="fade-up" data-aos-duration="1000"
                       data-aos-delay="200" className="block rounded-lg bg-[#f4f5f8] shadow-secondary-1 dark:bg-surface-dark">
             <div
@@ -113,32 +114,20 @@ const Home = () => {
               data-twe-ripple-color="light"
             >
               <img className="rounded-t-lg h-96 w-full bg-cover object-cover" src={country.image} alt="" />
-              <a href="#!">
-                <div className="absolute bottom-0 left-0 right-0 top-0 h-full w-full overflow-hidden bg-[hsla(0,0%,98%,0.15)] bg-fixed opacity-0 transition duration-300 ease-in-out hover:opacity-100"></div>
-              </a>
             </div>
             <div className="p-6 text-black dark:text-white">
               <div>
-                <small className="text-black flex items-center mb-3 gap-2">
+                <small className="text-black text-2xl flex items-center mb-3 gap-2">
                   <FaLocationDot />
-                  {country.country_name}
+                  {country.country_Name}
                 </small>
               </div>
               <p className="mb-4 text-black">{country.description.slice(0,100)}...</p>
               <div>
-              <Link >
-                <button
-                  type="button"
-                  className="inline-block rounded bg-[#1f95ae] px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal text-white shadow-primary-3 transition duration-150 ease-in-out hover:bg-primary-accent-300 hover:shadow-primary-2 focus:bg-[#1f95ae] focus:shadow-primary-2 focus:outline-none focus:ring-0 active:bg-primary-600 active:shadow-primary-2 dark:shadow-black/30 dark:hover:shadow-dark-strong dark:focus:shadow-dark-strong dark:active:shadow-dark-strong"
-                  data-twe-ripple-init
-                  data-twe-ripple-color="light"
-                >
-                  View Details
-                </button>
-              </Link>
               </div>
             </div>
           </div>
+            </Link>
           </div>
         ))
       }

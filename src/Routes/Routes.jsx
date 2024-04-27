@@ -10,6 +10,8 @@ import ViewDetails from "../Pages/ViewDetails";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import UpdateTourismSpot from "../Components/UpdateTourismSpot";
 import ErrorPage from "../Pages/ErrorPage";
+import AllCountriesTouristSpots from "../Components/AllCountriesTouristSpots";
+
 
 const router = createBrowserRouter([
   {
@@ -53,6 +55,11 @@ const router = createBrowserRouter([
         element: <PrivateRoutes><UpdateTourismSpot></UpdateTourismSpot></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
       },
+      {
+        path: "/countries/:country_Name",
+        element: <AllCountriesTouristSpots></AllCountriesTouristSpots>,
+        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/country/${params.country_Name}`)
+      }
     ],
   },
 ]);

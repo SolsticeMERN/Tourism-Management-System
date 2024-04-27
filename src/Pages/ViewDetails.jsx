@@ -1,4 +1,3 @@
-import { Helmet } from "react-helmet-async";
 import { FaFacebookSquare } from "react-icons/fa";
 import { FaGoogle, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import { FcPhone } from "react-icons/fc";
@@ -12,6 +11,7 @@ import { MdPeopleOutline } from "react-icons/md";
 
 const ViewDetails = () => {
   const viewDetails = useLoaderData();
+  console.log(viewDetails);
 
   const {
     image,
@@ -27,10 +27,6 @@ const ViewDetails = () => {
   } = viewDetails;
   return (
     <div>
-      <Helmet>
-        <title>{tourists_spot_name} - Find house</title>
-        <meta name="description" content={shortdescription} />
-      </Helmet>
       <section className="mb-20">
         {/* Hero Section */}
         <div
