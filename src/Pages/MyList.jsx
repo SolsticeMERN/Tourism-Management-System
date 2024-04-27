@@ -1,10 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
-import TouristSport from "../Components/TouristSport";
+import MyListCard from "../Components/MyListCard";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
   const [myTourismSpots, setMyTourismSpots] = useState([]);
+  const [control, setControl] = useState(false);
 
   useEffect(() => {
     fetch(`http://localhost:3000/myTourismSpots/${user?.email}`)
@@ -13,7 +14,7 @@ const MyList = () => {
         setMyTourismSpots(data);
         console.log(data);
       });
-  }, [user]);
+  }, [user, control]);
 
   return (
     <div>
@@ -22,7 +23,7 @@ const MyList = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 p-5 lg:p-10">
         {myTourismSpots.map((touristic, index) => (
-          <TouristSport key={index} touristic={touristic}></TouristSport>
+          <MyListCard key={index} control={control} setControl={setControl}  touristic={touristic}></MyListCard>
         ))}
       </div>
     </div>

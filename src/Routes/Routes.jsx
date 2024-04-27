@@ -8,12 +8,15 @@ import Register from "../Pages/Register";
 import Home from "../Pages/Home";
 import ViewDetails from "../Pages/ViewDetails";
 import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
+import UpdateTourismSpot from "../Components/UpdateTourismSpot";
+import ErrorPage from "../Pages/ErrorPage";
 
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Main></Main>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         path: "/",
@@ -27,7 +30,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/addTouristSpot",
-        element: <AddTouristsSpot></AddTouristsSpot>,
+        element: <PrivateRoutes><AddTouristsSpot></AddTouristsSpot></PrivateRoutes>,
       },
       {
         path: "/myList",
@@ -44,6 +47,11 @@ const router = createBrowserRouter([
       {
         path: "/viewDetails/:id",
         element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
+        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
+      },
+      {
+        path: "/updateTouristSpot/:id",
+        element: <PrivateRoutes><UpdateTourismSpot></UpdateTourismSpot></PrivateRoutes>,
         loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
       }
     ],

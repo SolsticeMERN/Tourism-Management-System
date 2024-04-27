@@ -5,6 +5,7 @@ import { Helmet } from "react-helmet-async";
 
 const AddTouristsSpot = () => {
    const {user} = useContext(AuthContext)
+   console.log(user);
 
     const handleAddTouristSpot = e => {
         e.preventDefault();
@@ -28,7 +29,8 @@ const AddTouristsSpot = () => {
             image,
             totalVisitorsPerYear,
             shortdescription,
-            email: user.email
+            email: user.email,
+            displayName: user.displayName
         }
 
 
@@ -120,7 +122,7 @@ const AddTouristsSpot = () => {
                 </div>
             </div>
             <div className=" pt-5 border-t border-gray-200 rounded-b">
-        <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add tourists</button>
+        <button className="text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center" type="submit">Add tourists Spot</button>
     </div>
         </form>
     </div>
