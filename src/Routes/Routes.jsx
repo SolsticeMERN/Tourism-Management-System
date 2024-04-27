@@ -41,8 +41,9 @@ const router = createBrowserRouter([
         element: <Register></Register>,
       },
       {
-        path: "/viewDetails",
+        path: "/viewDetails/:id",
         element: <ViewDetails></ViewDetails>,
+        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
       }
     ],
   },

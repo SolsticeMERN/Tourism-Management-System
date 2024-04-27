@@ -1,6 +1,7 @@
 import { useLoaderData } from "react-router-dom";
 import TouristSport from "../Components/TouristSport";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 const AllTouristsSpot = () => {
   const tourismSpots = useLoaderData();
@@ -21,6 +22,10 @@ const AllTouristsSpot = () => {
 
   return (
     <div>
+         <Helmet>
+        <title>All TouristsSpot- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
       <div className="m-5 text-5xl text-center font-bold">
         <h2>All Tourist Spots</h2>
       </div>

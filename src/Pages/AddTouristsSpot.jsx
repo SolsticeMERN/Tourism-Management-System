@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../Providers/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const AddTouristsSpot = () => {
    const {user} = useContext(AuthContext)
@@ -62,6 +63,10 @@ const AddTouristsSpot = () => {
 
     return (
         <div>
+             <Helmet>
+        <title>Add TouristsSpot- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
             <div className="bg-white border md:border-4 rounded-lg shadow relative m-10">
 
     <div className="flex items-start justify-between p-5 border-b rounded-t">

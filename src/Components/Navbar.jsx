@@ -62,7 +62,9 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">TTravol</a>
+          <Link to='/'>
+          <button className="btn btn-ghost text-xl">TTravol</button>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal gap-5 px-1">
