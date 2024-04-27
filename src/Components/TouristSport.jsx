@@ -16,7 +16,8 @@ const TouristSport = ({ touristic }) => {
   return (
     <div>
       {/* card 1 */}
-      <div className="block rounded-lg bg-gray-600 shadow-secondary-1 dark:bg-surface-dark">
+      <div data-aos="flip-left" data-aos-duration="1000"
+                  data-aos-delay="200" className="block rounded-lg bg-[#f4f5f8] shadow-secondary-1 dark:bg-surface-dark">
         <div
           className="relative overflow-hidden bg-cover bg-no-repeat"
           data-twe-ripple-init
@@ -28,11 +29,11 @@ const TouristSport = ({ touristic }) => {
           </a>
         </div>
         <div className="p-6 text-black dark:text-white">
-          <h5 className="mb-2 text-xl font-medium leading-tight">
+          <h5 className="mb-2 text-xl text-black font-medium leading-tight">
             {tourists_spot_name}
           </h5>
           <div>
-            <small className="text-black flex items-center gap-2">
+            <small className="text-black flex items-center mb-3 gap-2">
               <FaLocationDot />
               {location}
             </small>

@@ -3,20 +3,35 @@ import { FaFacebookSquare } from "react-icons/fa";
 import { FaGoogle, FaLinkedin, FaTwitter } from "react-icons/fa6";
 import { FcPhone } from "react-icons/fc";
 import { Link, useLoaderData } from "react-router-dom";
-import banner from "../../src/assets/colosseum.jpeg"
+import banner from "../../src/assets/colosseum.jpeg";
+import { CiCalendar, CiLocationOn } from "react-icons/ci";
+import { SlLocationPin } from "react-icons/sl";
+import { AiOutlinePound } from "react-icons/ai";
+import { IoTimeOutline } from "react-icons/io5";
+import { MdPeopleOutline } from "react-icons/md";
 
-const ViewDetails = () => { 
+const ViewDetails = () => {
+  const viewDetails = useLoaderData();
 
-    const viewDetails = useLoaderData()
-
- const {image, tourists_spot_name, country_Name, location, shortdescription, average_cost, seasonality, travel_time, totalVisitorsPerYear, _id} = viewDetails
-    return (
-        <div>
-            <Helmet>
-            <title>{tourists_spot_name} - Find house</title>
-            <meta name="description" content={shortdescription} />
-        </Helmet>
-        <section className="mb-20">
+  const {
+    image,
+    tourists_spot_name,
+    country_Name,
+    location,
+    shortdescription,
+    average_cost,
+    seasonality,
+    travel_time,
+    totalVisitorsPerYear,
+    _id,
+  } = viewDetails;
+  return (
+    <div>
+      <Helmet>
+        <title>{tourists_spot_name} - Find house</title>
+        <meta name="description" content={shortdescription} />
+      </Helmet>
+      <section className="mb-20">
         {/* Hero Section */}
         <div
           className="relative overflow-hidden rounded-2xl bg-cover bg-no-repeat"
@@ -46,8 +61,8 @@ const ViewDetails = () => {
           </div>
         </div>
       </section>
-      {/* property details */}
-      <div>
+      {/* Tourists Spot details */}
+      <div className="rounded-2xl ">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-3">
           <div className="col-span-3">
             <div className="container  mx-auto md:px-6">
@@ -66,32 +81,43 @@ const ViewDetails = () => {
                     </div>
                   </div>
 
-                  <div className="w-full shrink-0 mt-5 grow-0 basis-auto px-3 md:w-8/12 xl:w-8/12">
-                    <h5 className="mb-3 text-xl font-bold">Short Description</h5>
+                  <div className="w-full dark:bg-slate-50 text-black shrink-0 mt-5 grow-0 basis-auto px-3 rounded-2xl p-10">
+                    <h5 className="mb-3 text-2xl font-bold">
+                      Short Description
+                    </h5>
                     <p className="mb-20 text-center">{shortdescription}</p>
-                    <h5 className="mb-5  text-xl font-bold">Information</h5>
-                    <div className="grid grid-cols-1 md:grid-cols-2">
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Country Name:</span> {country_Name}
+                    <h5 className="mb-5  text-2xl font-bold">Information</h5>
+                    <div className="grid grid-cols-1 p-2 md:p-10 lg:grid-cols-2">
+                      <p className="mb-6 text-center flex gap-2 items-center space-x-10">
+                        <SlLocationPin className="text-xl" />{" "}
+                        <span className="text-xl ">Country Name:</span>
+                        {country_Name}
                       </p>
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Location:</span>{" "}
-                        {location}
+                      <p className="mb-6 text-center flex  gap-2 items-center space-x-10">
+                        <CiLocationOn className="text-xl" />{" "}
+                        <span className="text-xl ">Location:</span> {location}
                       </p>
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Average Cost:</span>{" "}
+                      <p className="mb-6 text-center flex gap-2  items-center space-x-10">
+                        <AiOutlinePound className="text-xl" />{" "}
+                        <span className="text-xl ">Average Cost:</span>{" "}
                         {average_cost}
                       </p>
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Seasonality:</span>{" "}
+                      <p className="mb-6 text-center flex gap-2  items-center space-x-10">
+                        <CiCalendar className="text-xl" />{" "}
+                        <span className="text-xl ">Seasonality:</span>{" "}
                         {seasonality}
                       </p>
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Travel Time:</span>{" "}
+                      <p className="mb-6 text-center flex gap-2  items-center space-x-10">
+                        <IoTimeOutline className="text-xl" />{" "}
+                        <span className="text-xl ">Travel Time:</span>{" "}
                         {travel_time}
                       </p>
-                      <p className="mb-6 text-center">
-                        <span className="text-xl font-bold">Total Visitors  Per Year:</span>{" "}
+                      <p className="mb-6 text-center flex gap-2  items-center space-x-10 ">
+                        {" "}
+                        <MdPeopleOutline className="text-xl" />
+                        <span className="text-xl ">
+                          Total Visitors Per Year:
+                        </span>{" "}
                         {totalVisitorsPerYear}
                       </p>
                     </div>
@@ -101,7 +127,7 @@ const ViewDetails = () => {
             </div>
           </div>
           {/* contact form */}
-          <div className="col-span-1 mt-7">
+          <div className="col-span-1 mt-14 dark:bg-slate-50 rounded-2xl">
             <div>
               <div className="hero">
                 <div className="hero-content flex-col lg:flex-row-reverse">
@@ -146,8 +172,8 @@ const ViewDetails = () => {
                       <div className="form-control mt-6">
                         <p className="mb-4">
                           I&apos;m interested in this Tourist Spots{" "}
-                          <span className="font-bold">[{_id}]</span> and I&apos;d
-                          like to know more details.
+                          <span className="font-bold">[{_id}]</span> and
+                          I&apos;d like to know more details.
                         </p>
                         <button className="btn bg-[#1f95ae] text-white">
                           Send Message
@@ -183,7 +209,7 @@ const ViewDetails = () => {
         </div>
       </div>
     </div>
-    );
+  );
 };
 
 export default ViewDetails;
