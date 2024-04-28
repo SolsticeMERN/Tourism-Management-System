@@ -93,7 +93,7 @@ const Banner = () => {
                 <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
                 <div className="uppercase text-[#fff] font-black text-[75px]">
                   <span className="caption">Discover</span> the world with our
-                  <span className="text-[#ffe646]">{text}</span>
+                  <span className="text-[#fcff42]">{text}</span>
                   <span className="text-[#ea4949] font-normal">
                   <Cursor />
                   </span>

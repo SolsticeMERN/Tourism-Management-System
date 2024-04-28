@@ -1,5 +1,5 @@
-import logo from "../../src/assets//icon1.png"
-
+import travel from '../../public/travel.json'
+import Lottie from "lottie-react";
 
 const Footer = () => {
   return (
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container mx-auto">
       <footer className="footer w-full p-10 bg-base-200 text-base-content">
         <aside>
-          <img className="w-20 h-20" src={logo} alt=""/>
+            <Lottie animationData={travel} className="w-20 h-20" />
           <p>
             TTravol
             <br />

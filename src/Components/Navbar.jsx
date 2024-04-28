@@ -1,6 +1,8 @@
 import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../Providers/AuthProvider";
+import Lottie from "lottie-react";
+import travel from '../../public/travel.json'
 
 const Navbar = () => {
   const navLinks = (
@@ -62,6 +64,7 @@ const Navbar = () => {
               {navLinks}
             </ul>
           </div>
+          <Lottie animationData={travel} className="w-20 h-20" />
           <Link to='/'>
           <button className="btn btn-ghost text-xl">TTravol</button>
           </Link>
