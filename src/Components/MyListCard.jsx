@@ -15,7 +15,7 @@ const MyListCard = ({touristic, setControl, control}) => {
     
       const handleTouristsSpotDelete = _id => {
         console.log('delete', _id);
-        fetch(`http://localhost:3000/tourismSpots/${_id}`, {
+        fetch(`https://tourism-management-server-sand.vercel.app/tourismSpots/${_id}`, {
           method: "DELETE",
           headers: {
             "Content-Type": "application/json",

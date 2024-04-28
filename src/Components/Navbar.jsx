@@ -71,6 +71,7 @@ const Navbar = () => {
             {navLinks}
           </ul>
         </div>
+        {/* user information */}
         <div className="navbar-end gap-5">
           <div>
             <label className="cursor-pointer grid place-items-center">
@@ -134,13 +135,13 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box gap-3 w-52"
             >
               <li>
-                <h2>{user.displayName}</h2>
+                <h2 className="p-2">{user.displayName}</h2>
               </li>
               <li>
-                <a className="bg-red-600 text-white" onClick={handleLogOut}>
+                <a className="bg-red-600 p-2 text-white" onClick={handleLogOut}>
                   Logout
                 </a>
               </li>

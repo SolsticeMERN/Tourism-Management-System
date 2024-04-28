@@ -22,12 +22,12 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("http://localhost:3000/tourismSpots"),
+        loader: () => fetch("https://tourism-management-server-sand.vercel.app/tourismSpots"),
       },
       {
         path: "/allTouristSpot",
         element: <AllTouristsSpot></AllTouristsSpot>,
-        loader: () => fetch("http://localhost:3000/tourismSpots")
+        loader: () => fetch("https://tourism-management-server-sand.vercel.app/tourismSpots")
       },
       {
         path: "/addTouristSpot",
@@ -48,17 +48,17 @@ const router = createBrowserRouter([
       {
         path: "/viewDetails/:id",
         element: <PrivateRoutes><ViewDetails></ViewDetails></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-sand.vercel.app/tourismSpots/${params.id}`)
       },
       {
         path: "/updateTouristSpot/:id",
         element: <PrivateRoutes><UpdateTourismSpot></UpdateTourismSpot></PrivateRoutes>,
-        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/${params.id}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-sand.vercel.app/tourismSpots/${params.id}`)
       },
       {
         path: "/countries/:country_Name",
         element: <AllCountriesTouristSpots></AllCountriesTouristSpots>,
-        loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/country/${params.country_Name}`)
+        loader: ({params}) => fetch(`https://tourism-management-server-sand.vercel.app/tourismSpots/country/${params.country_Name}`)
       },
     ],
   },

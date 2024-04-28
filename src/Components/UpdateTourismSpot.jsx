@@ -48,7 +48,7 @@ const UpdateTourismSpot = () => {
       displayName: user.displayName,
     };
 
-    fetch(`http://localhost:3000/updateTourismSpots/${_id}`, {
+    fetch(`https://tourism-management-server-sand.vercel.app/updateTourismSpots/${_id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",

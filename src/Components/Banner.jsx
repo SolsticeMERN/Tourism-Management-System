@@ -1,10 +1,18 @@
 import { useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { useTypewriter } from "react-simple-typewriter"; 
+import { Cursor } from "react-simple-typewriter"; 
 AOS.init();
 
 const Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+
+  const [text]  = useTypewriter({
+    words: ["guide", "navigator", "companion"],
+    loop: true,
+    delaySpeed: 1500, 
+  });
 
   const slideTo = (index) => {
     setCurrentSlide(index);
@@ -27,7 +35,7 @@ const Banner = () => {
           data-twe-carousel-init
           data-twe-ride="carousel"
         >
-          {/* <!--Carousel indicators--> */}
+          {/* Carousel indicators */}
           <div
             className="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
             data-twe-carousel-indicators
@@ -61,9 +69,9 @@ const Banner = () => {
             ></button>
           </div>
 
-          {/* <!--Carousel items--> */}
+          {/* Carousel items */}
           <div className="relative w-full rounded-2xl  overflow-hidden after:clear-both after:block after:content-['']">
-            {/* <!--First item--> */}
+            {/* First item */}
             <div
               className={`relative float-left w-full  transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
                 currentSlide === 0 ? "-mr-0" : "-mr-[100%]"
@@ -76,19 +84,23 @@ const Banner = () => {
                 className="block w-full position bg-center object-fill bg-cover h-[300px] md:h-[675px]"
                 alt="..."
               />
-              <div data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200" className="absolute  font-poppins inset-x-[15%] top-40 hidden py-5 text-center text-white space-y-3 md:block">
-                <h5 className="uppercase">
-                  Let&apos;s Travel the world With Us
-                </h5>
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className="absolute  font-poppins inset-x-[15%] top-40 hidden py-5 text-center text-white space-y-3 md:block"
+              >
+                <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
                 <div className="uppercase text-[#fff] font-black text-[75px]">
                   <span className="caption">Discover</span> the world with our
-                  guide
+                  <span className="text-[#ffe646]">{text}</span>
+                  <span className="text-[#ea4949] font-normal">
+                  <Cursor />
+                  </span>
                 </div>
               </div>
             </div>
-            {/* <!--Second item--> */}
+            {/* Second item */}
             <div
               className={`relative  rounded-2xl float-left w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
                 currentSlide === 1 ? "-mr-0" : "-mr-[100%]"
@@ -100,22 +112,22 @@ const Banner = () => {
                 src="https://i.ibb.co/NSpmr3F/premium-photo-1661963952208-2db3512ef3de-q-80-w-1844-auto-format-fit-crop-ixlib-rb-4-0.jpg"
                 className="block w-full object-fill bg-center bg-cover h-[300px] md:h-[675px]"
                 alt="..."
-                
               />
-              <div data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200" className="absolute inset-x-[15%] top-40 hidden py-5  text-center text-white md:block">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className="absolute inset-x-[15%] top-40 hidden py-5  text-center text-white md:block"
+              >
                 <h5 data-aos="fade-up" className="uppercase">
                   Let&apos;s Travel the world With Us
                 </h5>
-                <p
-                  className="uppercase text-[#fff] font-black text-[75px]"
-                >
+                <p className="uppercase text-[#fff] font-black text-[75px]">
                   Explore Rome With <span className="caption">TTravol</span>
                 </p>
               </div>
             </div>
-            {/* <!--Third item--> */}
+            {/* Third item */}
             <div
               className={`relative rounded-2xl float-left w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none ${
                 currentSlide === 2 ? "-mr-0" : "-mr-[100%]"
@@ -128,9 +140,12 @@ const Banner = () => {
                 className="block w-full bg-center object-fill bg-cover h-[300px] md:h-[675px]"
                 alt="..."
               />
-              <div data-aos="fade-up"
-                  data-aos-duration="1000"
-                  data-aos-delay="200" className="absolute inset-x-[15%] top-40 hidden py-5 text-center text-white md:block">
+              <div
+                data-aos="fade-up"
+                data-aos-duration="1000"
+                data-aos-delay="200"
+                className="absolute inset-x-[15%] top-40 hidden py-5 text-center text-white md:block"
+              >
                 <h5 className="uppercase ">
                   Let&apos;s Travel the world With Us
                 </h5>
@@ -142,7 +157,7 @@ const Banner = () => {
             </div>
           </div>
 
-          {/* <!--Carousel controls - prev item--> */}
+          {/* Carousel controls - prev item */}
           <button
             className="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
             type="button"
@@ -168,7 +183,7 @@ const Banner = () => {
               Previous
             </span>
           </button>
-          {/* <!--Carousel controls - next item--> */}
+          {/* Carousel controls - next item */}
           <button
             className="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
             type="button"

@@ -62,7 +62,7 @@ const Register = () => {
               image: image,
             };
 
-            fetch("http://localhost:3000/users", {
+            fetch("https://tourism-management-server-sand.vercel.app/users", {
               method: "POST",
               headers: {
                 "Content-Type": "application/json",

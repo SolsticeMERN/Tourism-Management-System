@@ -8,7 +8,7 @@ const MyList = () => {
   const [control, setControl] = useState(false);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/myTourismSpots/${user?.email}`)
+    fetch(`https://tourism-management-server-sand.vercel.app/myTourismSpots/${user?.email}`)
       .then((res) => res.json())
       .then((data) => {
         setMyTourismSpots(data);

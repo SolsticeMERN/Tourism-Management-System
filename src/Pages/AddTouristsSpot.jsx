@@ -35,7 +35,7 @@ const AddTouristsSpot = () => {
 
 
         console.log(newTouristSpot);
-        fetch('http://localhost:3000/tourismSpots', {
+        fetch('https://tourism-management-server-sand.vercel.app/tourismSpots', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
