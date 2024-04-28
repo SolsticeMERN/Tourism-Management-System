@@ -73,7 +73,7 @@ const Banner = () => {
             >
               <img
                 src="https://i.ibb.co/bXnyySQ/photo-1541417904950-b855846fe074-q-80-w-1741-auto-format-fit-crop-ixlib-rb-4-0.jpg"
-                className="block w-full  object-fill bg-cover h-[300px] md:h-[675px]"
+                className="block w-full position bg-center object-fill bg-cover h-[300px] md:h-[675px]"
                 alt="..."
               />
               <div data-aos="fade-up"
@@ -98,7 +98,7 @@ const Banner = () => {
             >
               <img
                 src="https://i.ibb.co/NSpmr3F/premium-photo-1661963952208-2db3512ef3de-q-80-w-1844-auto-format-fit-crop-ixlib-rb-4-0.jpg"
-                className="block w-full object-fill bg-cover h-[300px] md:h-[675px]"
+                className="block w-full object-fill bg-center bg-cover h-[300px] md:h-[675px]"
                 alt="..."
                 
               />
@@ -125,7 +125,7 @@ const Banner = () => {
             >
               <img
                 src="https://i.ibb.co/Mk09fBL/dl-beatsnoop-com-low-1714162893.jpg"
-                className="block w-full object-fill bg-cover h-[300px] md:h-[675px]"
+                className="block w-full bg-center object-fill bg-cover h-[300px] md:h-[675px]"
                 alt="..."
               />
               <div data-aos="fade-up"
