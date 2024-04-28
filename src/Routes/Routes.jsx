@@ -11,7 +11,6 @@ import PrivateRoutes from "../PrivateRoutes/PrivateRoutes";
 import UpdateTourismSpot from "../Components/UpdateTourismSpot";
 import ErrorPage from "../Pages/ErrorPage";
 import AllCountriesTouristSpots from "../Components/AllCountriesTouristSpots";
-import Contact from "../Pages/Contact";
 
 
 const router = createBrowserRouter([
@@ -61,10 +60,6 @@ const router = createBrowserRouter([
         element: <AllCountriesTouristSpots></AllCountriesTouristSpots>,
         loader: ({params}) => fetch(`http://localhost:3000/tourismSpots/country/${params.country_Name}`)
       },
-      {
-        path: "/contact",
-        element: <Contact></Contact>,
-      }
     ],
   },
 ]);

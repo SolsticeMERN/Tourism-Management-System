@@ -1,3 +1,5 @@
+import { AiOutlinePound } from "react-icons/ai";
+import { CiCalendar } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link, useLoaderData } from "react-router-dom";
 
@@ -27,13 +29,25 @@ const AllCountriesTouristSpots = () => {
                   <h5 className="mb-2 text-xl text-black font-medium leading-tight">
                     {spot.tourists_spot_name}
                   </h5>
-                  <div>
+                  <div className="flex  gap-5">
+                  <small className="text-black flex mb-2 items-center gap-2">
+                      <FaLocationDot />
+                      {spot.country_Name}
+                    </small>
                     <small className="text-black flex mb-2 items-center gap-2">
                       <FaLocationDot />
                       {spot.location}
                     </small>
                   </div>
                   <p className="mb-4 text-black">{spot.shortdescription}</p>
+                  <div className="text-black flex gap-5 mb-4">
+                    <span className="flex items-center gap-2">
+                    <AiOutlinePound/>  {spot.average_cost}
+                    </span>
+                    <p className="flex items-center gap-2">
+                    <CiCalendar/> {spot.seasonality}
+                    </p>
+                  </div>
                   <div>
                     <Link to={`/viewDetails/${spot._id}`}>
                       <button
