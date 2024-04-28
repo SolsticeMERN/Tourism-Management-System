@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { AiOutlinePound } from "react-icons/ai";
 import { CiCalendar } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
@@ -10,6 +11,10 @@ const AllCountriesTouristSpots = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>Countries- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
       <div>
       <div  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {specificCountriesTouristSpots.map((spot, index) => (

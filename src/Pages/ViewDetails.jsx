@@ -8,6 +8,7 @@ import { SlLocationPin } from "react-icons/sl";
 import { AiOutlinePound } from "react-icons/ai";
 import { IoTimeOutline } from "react-icons/io5";
 import { MdPeopleOutline } from "react-icons/md";
+import { Helmet } from "react-helmet-async";
 
 const ViewDetails = () => {
   const viewDetails = useLoaderData();
@@ -27,6 +28,10 @@ const ViewDetails = () => {
   } = viewDetails;
   return (
     <div>
+        <Helmet>
+        <title>{tourists_spot_name}- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
       <section className="mb-20">
         {/* Hero Section */}
         <div

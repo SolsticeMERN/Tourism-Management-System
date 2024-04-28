@@ -1,9 +1,11 @@
+
 import travel from '../../public/travel.json'
 import Lottie from "lottie-react";
 
 const Footer = () => {
   return (
-    <div className="bg-base-200">
+    <div>
+        <div className="bg-base-200">
       <div className="container mx-auto">
       <footer className="footer w-full p-10 bg-base-200 text-base-content">
         <aside>
@@ -57,6 +59,7 @@ const Footer = () => {
       </div>
       </div>
       </div>
+    </div>
   );
 };
 

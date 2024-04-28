@@ -1,6 +1,7 @@
 import { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Providers/AuthProvider";
 import MyListCard from "../Components/MyListCard";
+import { Helmet } from "react-helmet-async";
 
 const MyList = () => {
   const { user } = useContext(AuthContext);
@@ -18,6 +19,10 @@ const MyList = () => {
 
   return (
     <div>
+        <Helmet>
+        <title>My List- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
       <div className="m-5 text-5xl text-center font-bold">
         <h2>My List</h2>
       </div>

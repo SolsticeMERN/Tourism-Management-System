@@ -83,7 +83,7 @@ const Login = () => {
   return (
     <div>
       <Helmet>
-        <title>Login - Find House</title>
+        <title>Login - TTravol</title>
       </Helmet>
       <div className="font-[sans-serif]  text-[#333]">
         <div className="min-h-screen flex fle-col items-center justify-center py-6 px-4">

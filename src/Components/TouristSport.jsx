@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaLocationDot } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
@@ -15,6 +16,10 @@ const TouristSport = ({ touristic }) => {
 
   return (
     <div>
+        <Helmet>
+        <title>All TouristsSpots- TTravol</title>
+        <meta name="description" content="Description of Register" />
+      </Helmet>
       {/* card 1 */}
       <div data-aos="flip-left" data-aos-duration="1000"
                   data-aos-delay="200" className="block rounded-lg bg-[#f4f5f8] shadow-secondary-1 dark:bg-surface-dark">
