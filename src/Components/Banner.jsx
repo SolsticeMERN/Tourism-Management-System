@@ -88,7 +88,7 @@ const Banner = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="absolute  font-poppins inset-x-[15%] top-40 hidden py-5 text-center text-white space-y-3 md:block"
+                className="absolute bg-gradient-to-r from-[#cfc8c8] to-[rgba(21, 21, 21, 0)] rounded-xl font-poppins inset-x-[15%] top-40 hidden py-5 text-center text-white space-y-3 md:block"
               >
                 <h5 className="uppercase">Let&apos;s Travel the world With Us</h5>
                 <div className="uppercase text-[#fff] font-black text-[75px]">
@@ -117,7 +117,7 @@ const Banner = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="absolute inset-x-[15%] top-40 hidden py-5  text-center text-white md:block"
+                className="absolute bg-gradient-to-r from-[#1e1d1d] to-[rgba(21, 21, 21, 0)] rounded-xl font-poppins inset-x-[15%] top-40 hidden py-5 text-center text-white space-y-3 md:block"
               >
                 <h5 data-aos="fade-up" className="uppercase">
                   Let&apos;s Travel the world With Us
@@ -136,7 +136,7 @@ const Banner = () => {
               data-twe-carousel-item
             >
               <img
-                src="https://i.ibb.co/Mk09fBL/dl-beatsnoop-com-low-1714162893.jpg"
+                src="https://i.ibb.co/CQf2Vdw/dl-beatsnoop-com-ultra-Mv-Q6-DOEBAm.jpg"
                 className="block w-full bg-center object-fill bg-cover h-[300px] md:h-[675px]"
                 alt="..."
               />
@@ -144,7 +144,7 @@ const Banner = () => {
                 data-aos="fade-up"
                 data-aos-duration="1000"
                 data-aos-delay="200"
-                className="absolute inset-x-[15%] top-40 hidden py-5 text-center text-white md:block"
+                className="absolute bg-gradient-to-r from-[#1e1d1d] to-[rgba(21, 21, 21, 0)] rounded-xl font-poppins inset-x-[15%] top-40 px-5 hidden py-5 text-center text-white space-y-3 md:block"
               >
                 <h5 className="uppercase ">
                   Let&apos;s Travel the world With Us
