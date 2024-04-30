@@ -1,5 +1,8 @@
 import { Helmet } from "react-helmet-async";
+import { CiCalendar } from "react-icons/ci";
 import { FaLocationDot } from "react-icons/fa6";
+import { IoTimeOutline } from "react-icons/io5";
+import { MdPeopleOutline } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const TouristSport = ({ touristic }) => {
@@ -9,6 +12,8 @@ const TouristSport = ({ touristic }) => {
     location,
     average_cost,
     shortdescription,
+    travel_time,
+    totalVisitorsPerYear,
     _id,
   } = touristic;
 
@@ -45,6 +50,9 @@ const TouristSport = ({ touristic }) => {
           </div>
           <p className="mb-4 text-black">{shortdescription}</p>
           <p className="mb-4 text-black">{average_cost}</p>
+          <p className="mb-4 text-black flex item-center gap-2"><IoTimeOutline/> {travel_time}</p>
+          <p className="mb-4 text-black flex item-center gap-2"><MdPeopleOutline></MdPeopleOutline> {totalVisitorsPerYear}</p>
+          <p className="mb-4 text-black flex item-center gap-2"><CiCalendar/> {totalVisitorsPerYear}</p>
           <Link to={`/viewDetails/${_id}`}>
             <button
               type="button"
